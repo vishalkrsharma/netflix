@@ -27,11 +27,12 @@ const Auth = () => {
         redirect: false,
         callbackUrl: '/',
       });
-      // router.push('/profiles');
+
+      router.push('/profiles');
     } catch (error) {
       console.log(error);
     }
-  }, [email, password]);
+  }, [email, password, router]);
 
   const register = useCallback(async () => {
     try {
@@ -40,7 +41,6 @@ const Auth = () => {
         name,
         password,
       });
-
       login();
     } catch (error) {
       console.log(error);
@@ -78,8 +78,8 @@ const Auth = () => {
                 onChange={(e: any) => setEmail(e.target.value)}
               />
               <Input
-                type='password'
                 id='password'
+                type='password'
                 label='Password'
                 value={password}
                 onChange={(e: any) => setPassword(e.target.value)}
