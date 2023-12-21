@@ -2,6 +2,7 @@ import AuthForm from '@/components/AuthForm';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../lib/authOptions';
 import { redirect } from 'next/navigation';
+import Image from 'next/image';
 
 const Auth = async () => {
   const session = await getServerSession(authOptions);
@@ -13,7 +14,7 @@ const Auth = async () => {
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className='bg-black w-full h-full lg:bg-opacity-50'>
-        <nav className='px-12 py-5'>
+        <nav className='px-12 py-5 relative'>
           <img
             src='/images/logo.png'
             className='h-12'
