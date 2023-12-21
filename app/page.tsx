@@ -1,7 +1,7 @@
-import Signout from '@/components/Signout';
 import { getServerSession } from 'next-auth';
 import { authOptions } from './lib/authOptions';
 import { redirect } from 'next/navigation';
+import Navbar from '@/components/Navbar';
 
 const Home = async () => {
   const session = await getServerSession(authOptions);
@@ -10,9 +10,7 @@ const Home = async () => {
 
   return (
     <>
-      <div>Netflix</div>
-      <div>{session?.user?.name}</div>
-      <Signout />
+      <Navbar name={session?.user?.name} />
     </>
   );
 };
