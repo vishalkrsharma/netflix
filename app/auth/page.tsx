@@ -7,7 +7,7 @@ const Auth = async () => {
   const session = await getServerSession(authOptions);
 
   if (session) {
-    redirect('/');
+    redirect('/profiles');
   }
 
   return (

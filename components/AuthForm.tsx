@@ -25,8 +25,7 @@ const AuthForm = () => {
       await signIn('credentials', {
         email,
         password,
-        redirect: false,
-        callbackUrl: '/',
+        callbackUrl: '/profiles',
       });
 
       router.push('/');
@@ -86,13 +85,13 @@ const AuthForm = () => {
         {/* <div className='flex flex-row items-center gap-4 mt-8 justify-center'>
           <div
             className='w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition'
-            onClick={() => signIn('google', { callbackUrl: '/' })}
+            onClick={() => signIn('google', { callbackUrl: '/profiles' })}
           >
             <FcGoogle size={30} />
           </div>
           <div
             className='w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition'
-            onClick={() => signIn('github', { callbackUrl: '/' })}
+            onClick={() => signIn('github', { callbackUrl: '/profiles' })}
           >
             <FaGithub size={30} />
           </div>
