@@ -2,7 +2,7 @@ import axios from 'axios';
 import { FaCircleInfo } from 'react-icons/fa6';
 
 const getData = async () => {
-  const { data } = await axios.get(`${process.env.API_URL}/api/random`);
+  const { data } = await axios.get(`${process.env.API_URL}/api/billboard`);
   return data;
 };
 
