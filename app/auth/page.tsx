@@ -1,8 +1,7 @@
 import AuthForm from '@/components/AuthForm';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../lib/authOptions';
+import { authOptions } from '@/lib/authOptions';
 import { redirect } from 'next/navigation';
-import Image from 'next/image';
 
 const Auth = async () => {
   const session = await getServerSession(authOptions);
